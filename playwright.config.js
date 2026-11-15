@@ -1,0 +1,51 @@
+import { defineConfig } from '@playwright/test'
+
+export default defineConfig({
+  testDir: './tests/e2e',
+  testMatch: '**/*.spec.mjs',
+  outputDir: './test-results/e2e',
+  snapshotPathTemplate: '{testDir}/snapshots/{projectName}/{testFilePath}/{arg}{ext}',
+  forbidOnly: true,
+  workers: 1,
+  retries: 0,
+  timeout: 60_000,
+  expect: {
+    timeout: 7500,
+    toHaveScreenshot: { animations: 'disabled', maxDiffPixels: 100 },
+  },
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-report/html', open: 'never' }],
+    ['json', { outputFile: 'playwright-report/results.json' }],
+  ],
+  use: {
+    browserName: 'chromium',
+    baseURL: 'http://127.0.0.1:4175',
+    locale: 'es-PE',
+    timezoneId: 'America/Lima',
+    colorScheme: 'dark',
+    reducedMotion: 'no-preference',
+    deviceScaleFactor: 1,
+    actionTimeout: 10_000,
+    navigationTimeout: 30_000,
+    screenshot: 'on',
+    trace: 'retain-on-failure',
+    video: 'retain-on-failure',
+  },
+  projects: [
+    { name: 'desktop-wide', use: { viewport: { width: 1920, height: 1080 } } },
+    { name: 'desktop', use: { viewport: { width: 1440, height: 900 } } },
+    { name: 'desktop-compact', use: { viewport: { width: 1024, height: 768 } } },
+    { name: 'tablet', use: { viewport: { width: 820, height: 1180 }, isMobile: true, hasTouch: true } },
+    { name: 'tablet-compact', use: { viewport: { width: 768, height: 1024 }, isMobile: true, hasTouch: true } },
+    { name: 'mobile', use: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true } },
+    { name: 'mobile-compact', use: { viewport: { width: 360, height: 800 }, isMobile: true, hasTouch: true } },
+    { name: 'mobile-small', use: { viewport: { width: 320, height: 740 }, isMobile: true, hasTouch: true } },
+  ],
+  webServer: {
+    command: 'npm run build && npm run preview -- --host 127.0.0.1 --port 4175 --strictPort',
+    url: 'http://127.0.0.1:4175',
+    reuseExistingServer: false,
+    timeout: 120_000,
+  },
+})

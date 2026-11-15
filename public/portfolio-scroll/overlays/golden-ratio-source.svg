@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-label="Espiral áurea con rectángulos y cuadrados proporcionados según phi">
+<!-- Estructura: rectángulo 630 x 389.3614, razón phi=1.6180339887. Arcos de 90 grados inscritos en cuadrados sucesivos. -->
+<defs><linearGradient id="gold" x1="870" y1="500" x2="1500" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#89bcff"/><stop offset=".55" stop-color="#b5c4ee"/><stop offset="1" stop-color="#f0d5a8"/></linearGradient></defs>
+<rect x="870" y="140" width="630" height="389.36" stroke="#84abdf" stroke-opacity=".22" stroke-width="1.1"/>
+<g stroke="#84abdf" stroke-opacity=".34" stroke-width="1.2"><rect x="870" y="140" width="389.36" height="389.36"/>
+<rect x="1259.36" y="288.72" width="240.64" height="240.64"/>
+<rect x="1351.28" y="140" width="148.72" height="148.72"/>
+<rect x="1259.36" y="140" width="91.92" height="91.92"/>
+<rect x="1259.36" y="231.92" width="56.81" height="56.81"/>
+<rect x="1316.17" y="253.61" width="35.11" height="35.11"/>
+<rect x="1329.58" y="231.92" width="21.7" height="21.7"/>
+<rect x="1316.17" y="231.92" width="13.41" height="13.41"/>
+<rect x="1316.17" y="245.33" width="8.29" height="8.29"/></g>
+<path d="M870 140 A389.36 389.36 0 0 0 1259.36 529.36 A240.64 240.64 0 0 0 1500 288.72 A148.72 148.72 0 0 0 1351.28 140 A91.92 91.92 0 0 0 1259.36 231.92 A56.81 56.81 0 0 0 1316.17 288.72 A35.11 35.11 0 0 0 1351.28 253.61 A21.7 21.7 0 0 0 1329.58 231.92 A13.41 13.41 0 0 0 1316.17 245.33 A8.29 8.29 0 0 0 1324.46 253.61 A5.12 5.12 0 0 0 1329.58 248.49 A3.17 3.17 0 0 0 1326.41 245.33" stroke="url(#gold)" stroke-width="3" stroke-opacity=".82" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#94a8ca" stroke-opacity=".24" stroke-width=".9" stroke-dasharray="5 10"><path d="M870 529.36L1500 140"/><path d="M848 529.36H1530"/></g>
+<g fill="#e6d1ae" opacity=".72"><circle cx="870" cy="140" r="2.4"/><circle cx="1500" cy="140" r="2.4"/><circle cx="870" cy="529.36" r="2.4"/><circle cx="1500" cy="529.36" r="2.4"/></g>
+<text x="1483" y="120" text-anchor="end" font-family="ui-monospace,monospace" font-size="18" letter-spacing="3" fill="#c1cdeb" opacity=".65">φ = 1.618...</text>
+</svg>

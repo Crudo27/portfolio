@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.taste-skill/
+.env
+.env.*
+!.env.example
+*.log
+playwright-report/
+test-results/
+
+# Herramientas locales y materiales de trabajo; no forman parte del portfolio.
+/.agents/
+/.aws/
+/.codex/
+/graphify-out/
+/.cleanup-staging/
+/docs/audit-phase3/

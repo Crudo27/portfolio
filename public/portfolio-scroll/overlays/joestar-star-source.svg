@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-label="Constelación geométrica de estrella de cinco puntas">
+<!-- Estrella regular de cinco puntas con nodos de conexión; overlay para Proyectos. -->
+<defs>
+ <filter id="glow" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<g stroke="#719bcf" stroke-width="1" opacity=".20">
+ <path d="M910 377H1462 M1190 61V557" stroke-dasharray="2 16" />
+ <circle cx="1190" cy="315" r="204" stroke-dasharray="2 14"/>
+ <circle cx="1190" cy="315" r="55.99" stroke-dasharray="1 11"/>
+</g>
+<path d="M1190 137 L1229.96 259.99 L1359.29 259.99 L1254.66 336.01 L1294.63 459.01 L1190 382.99 L1085.37 459.01 L1125.34 336.01 L1020.71 259.99 L1150.04 259.99 Z" fill="#7199ed" fill-opacity=".045" stroke="#81b7ff" stroke-opacity=".72" stroke-width="2.1" stroke-linejoin="round"/>
+<path d="M1190 137 L1294.63 459.01 L1020.71 259.99 L1359.29 259.99 L1085.37 459.01 L1190 137" stroke="#8bb8ff" stroke-opacity=".24" stroke-width="1.05" stroke-dasharray="4 9"/>
+<g stroke="#86bcff" stroke-width="1" opacity=".48">
+ <path d="M1181 137h18 M1190 128v18"/><path d="M1350.29 259.99h18 M1359.29 250.99v18"/><path d="M1285.63 459.01h18 M1294.63 450.01v18"/><path d="M1076.37 459.01h18 M1085.37 450.01v18"/><path d="M1011.71 259.99h18 M1020.71 250.99v18"/>
+</g>
+<g fill="#9fc9ff">
+ <circle cx="1190" cy="137" r="10" opacity=".54" filter="url(#glow)"/><circle cx="1190" cy="137" r="3.3" opacity=".94"/><circle cx="1359.29" cy="259.99" r="10" opacity=".54" filter="url(#glow)"/><circle cx="1359.29" cy="259.99" r="3.3" opacity=".94"/><circle cx="1294.63" cy="459.01" r="10" opacity=".54" filter="url(#glow)"/><circle cx="1294.63" cy="459.01" r="3.3" opacity=".94"/><circle cx="1085.37" cy="459.01" r="10" opacity=".54" filter="url(#glow)"/><circle cx="1085.37" cy="459.01" r="3.3" opacity=".94"/><circle cx="1020.71" cy="259.99" r="10" opacity=".54" filter="url(#glow)"/><circle cx="1020.71" cy="259.99" r="3.3" opacity=".94"/>
+ <circle cx="1229.96" cy="259.99" r="2.2" opacity=".65"/><circle cx="1254.66" cy="336.01" r="2.2" opacity=".65"/><circle cx="1190" cy="382.99" r="2.2" opacity=".65"/><circle cx="1125.34" cy="336.01" r="2.2" opacity=".65"/><circle cx="1150.04" cy="259.99" r="2.2" opacity=".65"/>
+</g>
+<g fill="#93baf4" opacity=".56"><circle cx="945" cy="130" r="2"/><circle cx="1504" cy="178" r="1.8"/><circle cx="980" cy="535" r="1.5"/><circle cx="1410" cy="580" r="1.2"/></g>
+</svg>

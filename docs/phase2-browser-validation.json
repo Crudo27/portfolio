@@ -1,0 +1,37 @@
+{
+  "desktop": {
+    "source": "http://127.0.0.1:5173/",
+    "viewport": [
+      1440,
+      900
+    ],
+    "checkedPositions": 159,
+    "uniqueCanvasFrames": 80,
+    "missingFrames": [],
+    "failures": [],
+    "maxCache": 12,
+    "initialFrameRequests": [
+      "/portfolio-scroll/frames/desktop/000.webp",
+      "/portfolio-scroll/frames/desktop/062.webp",
+      "/portfolio-scroll/frames/desktop/063.webp",
+      "/portfolio-scroll/frames/desktop/061.webp",
+      "/portfolio-scroll/frames/desktop/064.webp",
+      "/portfolio-scroll/frames/desktop/060.webp",
+      "/portfolio-scroll/frames/desktop/065.webp",
+      "/portfolio-scroll/frames/desktop/059.webp"
+    ],
+    "oldResources": 0,
+    "overlaysWithinBackground": 2,
+    "flowBlocks": 0,
+    "footerGap": 47.9375,
+    "footerPadding": "48px",
+    "errors": [],
+    "layoutShifts": []
+  },
+  "notes": [
+    "Chrome DevTools MCP sobre el servidor de desarrollo existente; no se lanzó Chromium desde el sandbox.",
+    "Viewport móvil 390x844: verificados 0,27,52,79,52,27,0; sin overflow horizontal.",
+    "Movimiento reducido 390x844: hitos 27,52,79,52 correctos tras corregir el redondeo subpíxel; cero animaciones decorativas activas.",
+    "Capturas inspeccionadas de Proyectos en escritorio/móvil y Stack en escritorio; la revisión visual final completa sigue pendiente."
+  ]
+}

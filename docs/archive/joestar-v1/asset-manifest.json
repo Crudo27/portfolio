@@ -1,0 +1,49 @@
+{
+  "version": "1.1",
+  "target": "Vue 3 portfolio",
+  "scenes": [
+    {
+      "section": "hero",
+      "background": "backgrounds/01-hero.webp"
+    },
+    {
+      "section": "projects",
+      "background": "backgrounds/02-projects.webp"
+    },
+    {
+      "section": "stack",
+      "background": "backgrounds/03-stack.webp"
+    },
+    {
+      "section": "contact",
+      "background": "backgrounds/04-contact.webp"
+    }
+  ],
+  "characters": [
+    "characters/johnny-back.png",
+    "characters/gyro-back.png"
+  ],
+  "overlays": [
+    "overlays/stars.svg",
+    "overlays/joestar-star.svg",
+    "overlays/golden-ratio.svg",
+    "overlays/contrast-gradient.svg"
+  ],
+  "references": "references/",
+  "alpha_caveat": "recortados automáticamente; revisar halos y borde de siluetas",
+  "recommended_section_ids": [
+    "hero",
+    "projects",
+    "stack",
+    "contact"
+  ],
+  "legacy_aliases": {
+    "overlays/orbit-nodes.svg": "overlays/joestar-star.svg",
+    "overlays/technical-grid.svg": "overlays/golden-ratio.svg"
+  },
+  "scene_overlays": {
+    "projects": "overlays/joestar-star.svg",
+    "stack": "overlays/golden-ratio.svg"
+  },
+  "note": "Fondos WEBP, personajes y referencias del primer ZIP preservados byte a byte. Solo SVG geométricos y documentación/vista previa actualizados."
+}

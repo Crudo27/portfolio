@@ -1,0 +1,34 @@
+{
+  "version": "4.0",
+  "title": "Portfolio Joestar — de la noche al amanecer",
+  "frameCount": 80,
+  "frameName": "%03d.webp",
+  "desktop": {
+    "width": 1536,
+    "height": 864,
+    "path": "frames/desktop"
+  },
+  "mobile": {
+    "width": 720,
+    "height": 1280,
+    "path": "frames/mobile"
+  },
+  "keyframes": {
+    "hero": 0,
+    "projects": 27,
+    "stack": 52,
+    "contact": 79
+  },
+  "overlays": {
+    "projects": "overlays/joestar-star.svg",
+    "stack": "overlays/golden-ratio.svg"
+  },
+  "notes": [
+    "80 frames full-scene WebP per aspect ratio, prepared from the approved illustrated masters",
+    "New fully painted contact scene has Gyro seated directly left of Johnny, contemplating dawn",
+    "The final 18 images use an artistic dissolve between different painted compositions. Small alignment changes may be visible during the transition; these are not 80 hand-painted individual originals.",
+    "Characters must NOT be rendered separately or overlaid by Codex",
+    "SVG geometry is separate for crispness and animation",
+    "Respect prefers-reduced-motion; avoid preloading all frames"
+  ]
+}
