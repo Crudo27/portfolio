@@ -11,7 +11,9 @@
     "build": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --test tests/*.test.mjs",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "check:syntax": "node scripts/check-syntax.mjs",
+    "verify:dist": "node scripts/verify-dist.mjs"
   },
   "dependencies": {
     "@fontsource-variable/geist": "5.3.0",
@@ -22,6 +24,6 @@
     "@playwright/test": "1.65.0",
     "@vitejs/plugin-vue": "6.0.9",
     "@vue/server-renderer": "3.5.43",
-    "vite": "8.3.2"
+    "vite": "8.3.8"
   }
 }
