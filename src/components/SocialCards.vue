@@ -1,5 +1,6 @@
 <script setup>
 import { socialLinks } from '../data/portfolio.js'
+import { assetUrl } from '../assetUrl.js'
 import ArrowIcon from './ArrowIcon.vue'
 </script>
 
@@ -15,7 +16,7 @@ import ArrowIcon from './ArrowIcon.vue'
       :target="platform.href && platform.newTab ? '_blank' : undefined"
       :rel="platform.href && platform.newTab ? 'noopener noreferrer' : undefined"
     >
-      <img class="social-card__icon" :src="`/assets/icons/${platform.icon}.svg`" alt="" width="32" height="32" :data-icon="platform.icon" />
+      <img class="social-card__icon" :src="assetUrl(`assets/icons/${platform.icon}.svg`)" alt="" width="32" height="32" :data-icon="platform.icon" />
       <div class="social-card__copy">
         <span class="social-card__name">{{ platform.name }}</span>
         <span class="social-card__description">{{ platform.description }}</span>

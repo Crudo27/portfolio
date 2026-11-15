@@ -33,7 +33,7 @@ export const test = base.extend({
 export { expect }
 
 export async function openPortfolio(page) {
-  const response = await page.goto('/')
+  const response = await page.goto('./')
   expect(response.ok()).toBe(true)
   await expect(page.locator('header.nav')).toHaveClass(/nav--enhanced/)
   await page.evaluate(() => document.fonts.ready)

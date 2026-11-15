@@ -19,9 +19,9 @@ test('responsive: contenido, columnas y capturas @visual', async ({ page }, test
   await expect(scene).toHaveCSS('pointer-events', 'none')
   await expect(scene).toHaveCSS('position', 'fixed')
   const artwork = scene.locator('img')
-  await expect(artwork).toHaveAttribute('src', '/portfolio-scroll/frames/desktop/000.webp')
+  await expect(artwork).toHaveAttribute('src', '/portfolio/portfolio-scroll/frames/desktop/000.webp')
   const variant = width <= 720 || width / page.viewportSize().height <= .75 ? 'mobile' : 'desktop'
-  await expect.poll(() => artwork.evaluate((image) => new URL(image.currentSrc).pathname)).toBe(`/portfolio-scroll/frames/${variant}/000.webp`)
+  await expect.poll(() => artwork.evaluate((image) => new URL(image.currentSrc).pathname)).toBe(`/portfolio/portfolio-scroll/frames/${variant}/000.webp`)
   await expect(scene.locator('canvas')).toBeVisible()
   await expect(artwork).toHaveCSS('opacity', '1')
   await expect(scene.locator('[data-character]')).toHaveCount(0)

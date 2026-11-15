@@ -8,21 +8,25 @@
 - Actualización autorizada: las once fichas están confirmadas en `PORTFOLIO_CONTENT.md`; la mención anterior a fichas pendientes es histórica. Mantener la confidencialidad empresarial y no inventar enlaces públicos.
 
 ## Avances completados
-- Repositorio GitHub conectado: `Crudo27/portfolio`, rama `main`; baseline local/remoto efde045. El titular autorizó eliminar también en GitHub los materiales generados innecesarios.
-- Retirados12 archivos (551.119 bytes): inventario e informes duplicados de limpieza/contenido, cinco documentos del primer kit, dos instrucciones de instalación sustituidas y `skills-lock.json`.
-- Registro útil consolidado en `docs/validation.md`; README y DESIGN apuntan a documentación existente. Nuevas exclusiones en `.gitignore` evitan volver a publicar esos reportes generados.
-- Se conservan las once fichas, los160 fotogramas, SVG, manifiesto, maestros únicos, licencias, componentes, pruebas y34 referencias visuales. Sin cambios en aplicación ni recursos. Build y42 pruebas aprobados.
-- Publicación autorizada mediante un único commit de limpieza en main, sin reescribir el historial. La actualización remota se realiza con control de la revisión esperada.
+- Preparado GitHub Pages para `https://crudo27.github.io/portfolio/`: Vite usa base de producción `/portfolio/` y desarrollo `/`; prerender alineado. Rutas de Canvas, manifiesto, SVG, fallback e iconos resueltas con BASE_URL, sin rediseño ni cambios de animación.
+- Workflow de push a main/manual con Node24 LTS, npm ci, sintaxis, pruebas, build, verificación de artefactos y acciones oficiales fijadas por SHA. Permisos separados y concurrencia; no se activó Pages ni se ejecutó Actions.
+- SEO: canonical/OG/Twitter, PNG social1200×630 revisado, favicon, sitemap y robots del proyecto. Avisos de terceros distribuidos; recursos cinematográficos originales intactos.
+- Build y43 pruebas aprobados (42 anteriores y una de despliegue),24 JS/MJS con sintaxis correcta; dist verifica160 frames,165 huellas, SVG, fuentes/iconos y rutas. Dos fallos simulados (frame ausente/ruta sin base) rechazados y restaurados. YAML y condiciones del workflow comprobados.
+- Búsqueda de secretos en archivos actuales, primer commit local y siete variantes adicionales de los tres commits remotos: sin credenciales detectadas. Sin .env/metadatos de agentes versionados. No se crearon commits, se hizo push ni se cambiaron remotes en esta tarea.
 
 ## Archivos tocados
-- Eliminados: `docs/cleanup-inventory.csv`, `docs/cleanup-results.json`, `docs/cleanup.md`, `docs/content-validation.md`, `docs/archive/joestar-v1/` (cinco archivos), dos instrucciones obsoletas de `portfolio_joestar_amanecer_80f/` y `skills-lock.json`.
-- Actualizados: `.gitignore`, `README.md`, `DESIGN.md`, `PARTE.md`, `docs/validation.md`, `portfolio_joestar_amanecer_80f/README_EMPIEZA_AQUI.md`. Ninguna dependencia nueva ni cambios de código.
+- `.github/workflows/deploy.yml`, `.nvmrc`, `.gitignore`, `vite.config.js`, `package.json`, `scripts/prerender.mjs`, nuevos `scripts/check-syntax.mjs` y `scripts/verify-dist.mjs`.
+- Nuevo `src/assetUrl.js`; ajustes de URL en `src/App.vue`, `src/components/SocialCards.vue`, `PortfolioSceneBackground.vue` y `src/composables/useScrollSequence.js`.
+- `index.html`, `public/share.png`, `public/robots.txt`, `public/sitemap.xml`, `public/assets/licenses/third-party.txt`; sin modificar los WebP/SVG existentes.
+- Nuevo `tests/deployment.test.mjs`; `playwright.config.js`, `tests/e2e/fixtures.mjs` y `tests/e2e/portfolio.spec.mjs` adaptados a la subruta.
+- `README.md`, `DESIGN.md`, `PARTE.md`, `THIRD_PARTY_NOTICES.md`, `docs/deployment.md`, `docs/validation.md`, `docs/e2e.md`. `dist/` regenerado, excluido de Git.
 
 ## Bloqueos / Deuda técnica
-- SSH desde el sandbox no resuelve github.com y `.git` es de sólo lectura. Se publica por el conector GitHub autenticado; los archivos locales coinciden con la limpieza, pero el índice/referencias locales deben sincronizarse desde una terminal normal.
-- No se lanzó Chromium en el sandbox. Continúan pendientes revisión visual responsive, foco nativo y Playwright completo fuera del sandbox.
-- LinkedIn, enlace público de Vende360, institución/fechas y dominio canónico siguen pendientes. Second Brain mantiene su privacidad e Idemne no tiene demo jugable.
-- Conservados los maestros únicos y los límites originales de la secuencia:061/062 idénticos y doble contorno en070 escritorio.
+- Derechos de redistribución del kit y personajes Joestar no aportados explícitamente: confirmar antes de publicación definitiva. Fuentes OFL, Vue/Taste MIT y logos/iconos CC0/ISC identificados; no se inventa una licencia global del repositorio.
+- npm audit no pudo consultar avisos por DNS bloqueado a registry.npmjs.org; no se afirma ausencia de vulnerabilidades. Ejecutarlo desde terminal con red.
+- Preview bloqueado por EPERM en127.0.0.1:4175 y Chrome MCP sin conexión. Sin navegación HTTP/visual ni Playwright completo; verificaciones de subruta hechas sobre artefactos y SSR. Actionlint/gitleaks no instalados; validación YAML y búsqueda de patrones realizadas con límites documentados.
+- `.git` sólo lectura: local efde045 frente a main remoto47ebda9; origin SSH equivale a Crudo27/portfolio por HTTPS. No se alteró Git. Sincronización manual conservando archivos documentada, evitando duplicar la limpieza ya publicada.
+- LinkedIn y enlace público de Vende360 pendientes. Persisten061/062 idénticos y doble contorno original en070; no se tocaron los assets.
 
 ## Siguiente paso
-- Desde una terminal con permisos, sincronizar los metadatos Git con main remoto sin descartar archivos de trabajo; después revisar las once fichas en navegador y ejecutar `npm run test:e2e` desde una terminal externa; revisar diferencias visuales sin aprobarlas automáticamente. Completar únicamente datos y enlaces confirmados.
+- Confirmar derechos de imágenes; desde terminal normal sincronizar metadatos con main remoto, ejecutar npm audit y preview/Playwright bajo `/portfolio/`. Revisar diff, realizar commit/push manual siguiendo `docs/deployment.md`, habilitar Pages con origen GitHub Actions y comprobar la primera ejecución y la URL publicada.

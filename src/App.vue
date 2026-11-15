@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { personalProfile, projects, technologies } from './data/portfolio.js'
+import { assetUrl } from './assetUrl.js'
 import ArrowIcon from './components/ArrowIcon.vue'
 import SiteHeader from './components/SiteHeader.vue'
 import ProjectCard from './components/ProjectCard.vue'
@@ -79,7 +80,7 @@ function explore(entry, kind, event) {
           <ul class="tools-grid" aria-label="Tecnologías principales">
             <li v-for="tool in technologies" :key="tool.name" class="tool-row">
               <button type="button" class="tool-button" aria-haspopup="dialog" aria-controls="detail-dialog" :aria-label="`Explorar ${tool.name}`" @click="explore(tool, 'technology', $event)">
-                <img :src="`/assets/icons/${tool.icon}.svg`" alt="" width="36" height="36" :data-icon="tool.icon" />
+                <img :src="assetUrl(`assets/icons/${tool.icon}.svg`)" alt="" width="36" height="36" :data-icon="tool.icon" />
                 <span class="tool-copy"><span class="tool-name">{{ tool.name }}</span><span class="tool-category">{{ tool.category }}</span></span>
                 <ArrowIcon />
               </button>

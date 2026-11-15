@@ -1,5 +1,35 @@
 # Validación de la implementación Vue 3
 
+## Preparación de producción y seguridad — 15 de noviembre de 2026
+
+**Configuración preparada; sin commit, push ni despliegue ejecutados.** URL prevista: `https://crudo27.github.io/portfolio/`. Desarrollo conserva `/`; producción y prerender usan `/portfolio/`. Se revisaron las rutas estáticas/dinámicas y las rutas relativas del manifiesto, sin alterar sus bytes. Detalles operativos y comandos en [deployment.md](deployment.md).
+
+- `npm run build`: correcto, incluido prerender con scopes CSS/HTML coincidentes. `npm test`: nueve archivos correctos. Runner detallado:43 pruebas aprobadas,0 fallos (42 previas más la regresión de despliegue).
+- `npm run check:syntax`:24 JS/MJS correctos; los SFC se compilan durante el build. No hay linter configurado.
+- `npm run verify:dist`: correcto. Comprueba cada copia pública, URLs de HTML/CSS bajo la subruta, fuentes, iconos,160 WebP, SVG,165 huellas, metadatos y vista previa social. Se simularon un frame ausente y una URL sin base: ambos bloquearon la comprobación; `dist/` fue restaurado y volvió a pasar.
+- El test nuevo recorre las160 URL generadas por la caché de producción y verifica fallback/iconos en el prerender. Las pruebas existentes conservan la cobertura de desarrollo, movimiento reducido y ciclos de vida. Las imágenes/SVG originales mantienen sus huellas.
+- Workflow analizado como YAML y revisado en eventos, dependencias, orden, permisos mínimos, concurrencia y SHA completos. Cinco releases oficiales contrastadas: checkout7.0.1, setup-node7.1.0, configure-pages6.0.0, upload-pages-artifact5.0.0 y deploy-pages5.0.1. Node24 LTS. No se ejecutó Actions ni actionlint (no instalado).
+- Imagen social PNG1200×630 inspeccionada localmente; canonical, Open Graph/Twitter, favicon y sitemap comprobados. El robots del proyecto no gobierna la raíz del host GitHub Pages.
+
+### Revisión previa de seguridad y privacidad
+
+Búsqueda por patrones de claves privadas, tokens conocidos, claves cloud/IA, asignaciones de credenciales, URLs con contraseña y direcciones privadas de red. Alcance: archivos de texto actuales candidatos a Git y todos los blobs del primer commit local; mediante el conector GitHub se enumeraron todas las refs remotas (sólo main), sus tres commits y las siete variantes de texto adicionales que no estaban en el almacén Git local. No se imprimieron valores sensibles ni se modificó el historial.
+
+No se detectaron credenciales ni URLs empresariales internas en ese alcance. No hay `.env` en la raíz ni archivos de entorno/metadatos de agentes en las versiones revisadas. Los hosts locales encontrados pertenecen a instrucciones/pruebas; el contenido de Second Brain y Vende360 no contiene clientes, registros, servidores ni datos internos. El nombre/correo del autor ya presentes en el primer commit corresponden al contacto confirmado; no se inventó ni agregó información personal. Los PNG revisados no contienen bloques de texto/EXIF y los160 WebP no tienen EXIF/XMP.
+
+Esta comprobación por patrones y lectura no certifica la ausencia de cualquier secreto posible; gitleaks no está instalado. `npm audit --json` no pudo consultar avisos: DNS de `registry.npmjs.org` bloqueado. **No se afirma que las dependencias carezcan de vulnerabilidades.** Ejecutar npm audit desde una terminal con red antes de publicar.
+
+Licencias de fuentes, iconos, Vue, Taste y dependencias contrastadas con archivos locales y fuentes primarias. Se incluyen avisos de terceros con la distribución. El kit de ilustraciones y sus personajes no aporta una licencia explícita de redistribución: requiere confirmación del titular antes de la publicación definitiva. Matriz y avisos en [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
+
+### Límites de validación y Git
+
+El preview local no pudo abrir `127.0.0.1:4175` (`EPERM`). Chrome DevTools MCP no conecta (`ECONNREFUSED127.0.0.1:9222`). No se lanzó Chromium ni se ejecutó Playwright completo dentro del sandbox; la comprobación de subruta fue de archivos compilados, HTML/CSS y código de producción en SSR, **no una sesión de navegación HTTP**. La configuración E2E se adaptó a `/portfolio/` para la revisión externa.
+
+El remoto SSH identifica `Crudo27/portfolio`, equivalente a su URL HTTPS. `.git` es de sólo lectura y los metadatos locales siguen en efde045; main remoto está en47ebda9. No se cambiaron remotes ni ramas, no se crearon commits y no se hizo push. Los comandos documentados permiten sincronizar el índice sin borrar archivos antes del commit manual. Los cambios previos de limpieza ya existen en GitHub y no deben duplicarse.
+
+Las secciones siguientes son historial de tareas anteriores.
+
+
 ## Limpieza de archivos versionados en GitHub — 15 de noviembre de 2026
 
 - Baseline local y remoto comprobados: `Crudo27/portfolio`, `main`, efde045. Sin cambios previos ajenos ni archivos ignorados rastreados.

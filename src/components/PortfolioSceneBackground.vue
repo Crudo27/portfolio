@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import SceneOverlay from './SceneOverlay.vue'
 import { useScrollSequence } from '../composables/useScrollSequence.js'
+import { assetUrl } from '../assetUrl.js'
 const scrollManifest = ref(null)
 const root = ref(null), canvas = ref(null)
 const { frame, targetFrame, ready, reduced, variant, error } = useScrollSequence(root, canvas, (_, manifest) => { scrollManifest.value = manifest })
@@ -10,14 +11,14 @@ const { frame, targetFrame, ready, reduced, variant, error } = useScrollSequence
 <template>
   <div ref="root" class="portfolio-scene" :data-frame="frame" :data-target-frame="targetFrame" :data-ready="ready" :data-reduced="reduced" :data-variant="variant" :data-error="error" aria-hidden="true" inert>
     <picture class="portfolio-scene__fallback">
-      <source media="(max-width: 720px), (max-aspect-ratio: 3/4)" srcset="/portfolio-scroll/frames/mobile/000.webp" width="720" height="1280" />
-      <img class="portfolio-scene__landscape" src="/portfolio-scroll/frames/desktop/000.webp" width="1536" height="864" alt="" decoding="async" fetchpriority="high" draggable="false" />
+      <source media="(max-width: 720px), (max-aspect-ratio: 3/4)" :srcset="assetUrl('portfolio-scroll/frames/mobile/000.webp')" width="720" height="1280" />
+      <img class="portfolio-scene__landscape" :src="assetUrl('portfolio-scroll/frames/desktop/000.webp')" width="1536" height="864" alt="" decoding="async" fetchpriority="high" draggable="false" />
     </picture>
     <canvas ref="canvas" class="portfolio-scene__canvas" width="1536" height="864"></canvas>
     <div class="portfolio-scene__veil"></div>
     <template v-if="scrollManifest">
-      <SceneOverlay :src="`/portfolio-scroll/${scrollManifest.overlays.projects}`" kind="projects" />
-      <SceneOverlay :src="`/portfolio-scroll/${scrollManifest.overlays.stack}`" kind="stack" />
+      <SceneOverlay :src="assetUrl(`portfolio-scroll/${scrollManifest.overlays.projects}`)" kind="projects" />
+      <SceneOverlay :src="assetUrl(`portfolio-scroll/${scrollManifest.overlays.stack}`)" kind="stack" />
     </template>
   </div>
 </template>

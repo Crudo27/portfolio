@@ -1,4 +1,5 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { assetUrl } from '../assetUrl.js'
 
 export const sequenceSettings = {
   cacheLimit: 12,
@@ -71,7 +72,7 @@ export function createFrameCache(manifest, onReady, ImageClass = Image) {
       }
       image.onload = () => finish(true)
       image.onerror = () => finish(false)
-      image.src = `/portfolio-scroll/${manifest[variant].path}/${manifest.frameName.replace('%03d', String(index).padStart(3, '0'))}`
+      image.src = assetUrl(`portfolio-scroll/${manifest[variant].path}/${manifest.frameName.replace('%03d', String(index).padStart(3, '0'))}`)
     }
   }
   return {
@@ -158,7 +159,7 @@ export function useScrollSequence(root, canvas, emit) {
     context = canvas.value.getContext('2d', { alpha: false })
     if (!context) { error.value = 'canvas'; return }
     try {
-      const response = await fetch('/portfolio-scroll/scroll-manifest.json', { signal: controller.signal })
+      const response = await fetch(assetUrl('portfolio-scroll/scroll-manifest.json'), { signal: controller.signal })
       if (!response.ok) throw new Error('Manifiesto no disponible')
       manifest = await response.json()
       if (manifest.frameCount !== 80 || manifest.frameName !== '%03d.webp'

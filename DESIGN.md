@@ -379,3 +379,12 @@ Las descripciones, problemas, experiencia y estados se muestran en párrafos sep
 El diálogo conserva ancho y alto máximo responsive, scroll interno, reserva del scrollbar, bloqueo del scroll de fondo, cierre con Escape, retorno de foco y reinicio al cambiar de ficha. Los estados pendientes sólo se muestran cuando falta información real; LinkedIn y el enlace público de Vende360 conservan su condición. Recursos cinematográficos, SVG, Canvas y controladores de movimiento permanecen intactos.
 
 Build y42 pruebas aprobados, con comprobación del renderizado completo de las once fichas en memoria y origen del contenido. Se actualizaron las pruebas de navegador para textos extensos, alcance, etiquetas y scroll; no se ejecutaron porque Chrome DevTools MCP no pudo conectar y AGENTS.md reserva Chromium para una terminal externa. El responsive se revisó en código; la inspección visual, el foco/modalidad nativos y las referencias visuales actuales quedan pendientes. Detalles consolidados en `docs/validation.md`.
+
+
+## 16. Preparación para GitHub Pages — 15 de noviembre de 2026
+
+La producción usa `https://crudo27.github.io/portfolio/`; Vite mantiene `/` en desarrollo y `/portfolio/` en producción. El prerender comparte el modo producción. Los cambios de componentes se limitan a resolver recursos mediante `src/assetUrl.js` y `import.meta.env.BASE_URL`: iconos, fallback responsive, manifiesto, frames y SVG. No cambian estilos, datos profesionales, temporización, caché, figuras ni originales cinematográficos. Los manifiestos conservan sus rutas relativas y sus huellas.
+
+Título y descripción se conservan; canonical, Open Graph/Twitter, favicon y sitemap usan la URL confirmada. La imagen social PNG1200×630 es una exportación de la composición SVG ya existente, sin alterar las ilustraciones. Los avisos de terceros se distribuyen junto al sitio. No se asigna licencia nueva a personajes, imágenes ni código propio; los permisos del kit deben confirmarse antes de la publicación definitiva.
+
+El workflow oficial compila, prueba y verifica el artefacto antes de desplegar. Build y43 pruebas correctos; URLs del prerender y los160 destinos del controlador comprobados con la base de producción. La validación visual de la aplicación bajo la subruta sigue pendiente porque no hay navegador conectado y el preview no puede abrir puerto en el sandbox. Preparar el despliegue no equivale a haber publicado el sitio. No se hicieron commits, push ni cambios de configuración en GitHub en esta tarea. Instrucciones en `docs/deployment.md`.

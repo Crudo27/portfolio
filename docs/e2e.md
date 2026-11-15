@@ -20,7 +20,7 @@ La primera ejecución crea las referencias visuales. Revísalas en el reporte y 
 npm run test:e2e
 ```
 
-Playwright ejecuta `npm run build` y sirve `dist/` mediante Vite Preview en `http://127.0.0.1:4175`. El puerto debe estar libre; se rechaza reutilizar un servidor que pueda contener una versión antigua. El servidor se cierra al terminar. No añadas flags para eludir el sandbox: abre la terminal externa para ejecutar la suite.
+Playwright ejecuta `npm run build` y sirve `dist/` mediante Vite Preview en `http://127.0.0.1:4175/portfolio/`. La suite usa esa subruta para comprobar el mismo montaje de producción que GitHub Pages; `npm run dev` conserva la raíz habitual. El puerto debe estar libre; se rechaza reutilizar un servidor que pueda contener una versión antigua. El servidor se cierra al terminar. No añadas flags para eludir el sandbox: abre la terminal externa para ejecutar la suite.
 
 Si faltan bibliotecas del sistema para Chromium, instala sus dependencias desde esa misma terminal siguiendo el diagnóstico de Playwright (`npx playwright install-deps chromium`). No es necesario instalar navegadores durante cada ejecución; vuelve a instalar Chromium al actualizar la versión de Playwright.
 

@@ -3,7 +3,7 @@ import { createServer } from 'vite'
 import { createSSRApp } from 'vue'
 import { renderToString } from '@vue/server-renderer'
 
-const server = await createServer({ server: { middlewareMode: true, hmr: false, ws: false }, appType: 'custom' })
+const server = await createServer({ mode: 'production', server: { middlewareMode: true, hmr: false, ws: false }, appType: 'custom' })
 try {
   const { default: App } = await server.ssrLoadModule('/src/App.vue')
   const content = await renderToString(createSSRApp(App))

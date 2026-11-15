@@ -22,3 +22,22 @@ test-results/
 /docs/cleanup-results.json
 /docs/cleanup.md
 /docs/content-validation.md
+
+# Cachés, archivos privados y material de desarrollo regenerable.
+.cache/
+.vite/
+coverage/
+*.tsbuildinfo
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+/screenshots/
+/*.zip
+/portfolio_johnny_gyro_kit/
+/portfolio_completo/
+/portfolio_scroll_cinematico/
+/portfolio_cinematico_definitivo/
+/portfolio_joestar_amanecer_80f/preview/
+/portfolio_joestar_amanecer_80f/src-snippets/
+/portfolio_joestar_amanecer_80f/portfolio-scroll/
