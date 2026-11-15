@@ -73,7 +73,7 @@ Los tres proyectos y las ocho tecnologías tienen sus fichas completas con el co
 
 Los proyectos tienen `summary` y `statusLabel` para las tarjetas; `description`, `problem`, `goals`, `features`, `technologies`, `technicalHighlights`, `status` y `repositoryNote` para el diálogo; y `links` (objetos `{ label, href }`) para destinos confirmados. `featuresNote` aclara las integraciones parciales de Vende360 y las mecánicas diseñadas de Idemne antes de sus listas. Las tecnologías tienen descripción, `usage`, `experience`, `projects` e `interests`. Los párrafos de texto se separan con una línea en blanco; `technicalHighlights` contiene párrafos. El diálogo mantiene scroll interno y muestra las tecnologías de proyectos como etiquetas. Los campos realmente vacíos conservan su indicación pendiente.
 
-Second Brain es un prototipo profesional en evolución; Vende360 recoge la participación durante prácticas profesionales; Idemne sigue en diseño y preproducción. Los repositorios y demostraciones no proporcionados no se convierten en enlaces: se explica su disponibilidad real. Las portadas siguen siendo conceptos gráficos, no capturas de los productos. Validación y límites en [docs/content-validation.md](docs/content-validation.md).
+Second Brain es un prototipo profesional en evolución; Vende360 recoge la participación durante prácticas profesionales; Idemne sigue en diseño y preproducción. Los repositorios y demostraciones no proporcionados no se convierten en enlaces: se explica su disponibilidad real. Las portadas siguen siendo conceptos gráficos, no capturas de los productos. Validación y límites en [docs/validation.md](docs/validation.md).
 
 GitHub (`https://github.com/Crudo27`) y correo (`mailto:gp100805@gmail.com`) están confirmados. Para activar LinkedIn, asignar su URL real a `href` en `socialLinks`; con `null` permanece una tarjeta informativa. No es necesario cambiar componentes. Los enlaces web anuncian la nueva pestaña; el correo abre el cliente del visitante, sin simular un envío en la página.
 
@@ -87,8 +87,8 @@ El controlador y sus límites están en `src/composables/useScrollSequence.js`; 
 
 ## Repositorio y recursos conservados
 
-La limpieza del15 de noviembre retiró las distribuciones duplicadas, escenas anteriores, ejemplos de integración y resultados generados. El inventario previo con rutas, tamaños y motivos está en [docs/cleanup-inventory.csv](docs/cleanup-inventory.csv); el resultado y las limitaciones están en [docs/cleanup.md](docs/cleanup.md).
+La limpieza del15 de noviembre retiró las distribuciones duplicadas, escenas anteriores, ejemplos de integración y resultados generados. El registro vigente y las verificaciones están consolidados en [docs/validation.md](docs/validation.md); los informes temporales y las instrucciones de integración ya sustituidas se retiraron del repositorio.
 
-`public/portfolio-scroll/` es la única distribución cinematográfica utilizada por la aplicación. Se conservan los maestros artísticos únicos y las instrucciones históricas en `portfolio_joestar_amanecer_80f/`; los documentos del primer kit están archivados en `docs/archive/joestar-v1/`. Esas instrucciones describen los ZIP originales y no deben volver a ejecutarse sobre la implementación actual.
+`public/portfolio-scroll/` es la única distribución cinematográfica utilizada por la aplicación. Los tres maestros artísticos únicos se conservan en `portfolio_joestar_amanecer_80f/sources/` para futuras revisiones de la ilustración. No son recursos de producción ni deben montarse como personajes separados.
 
 No versionar `node_modules/`, `dist/`, los informes de Playwright ni los metadatos locales de agentes y Graphify. Las capturas de referencia de `tests/e2e/snapshots/` sí se conservan y forman parte de las pruebas. Los comandos de instalación, build y despliegue permanecen iguales.

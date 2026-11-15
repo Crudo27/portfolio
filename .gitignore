@@ -15,3 +15,10 @@ test-results/
 /graphify-out/
 /.cleanup-staging/
 /docs/audit-phase3/
+
+# Artefactos de asistencia y reportes puntuales; la validación vigente vive en docs/validation.md.
+/skills-lock.json
+/docs/cleanup-inventory.csv
+/docs/cleanup-results.json
+/docs/cleanup.md
+/docs/content-validation.md

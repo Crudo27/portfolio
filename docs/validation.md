@@ -1,5 +1,15 @@
 # Validación de la implementación Vue 3
 
+## Limpieza de archivos versionados en GitHub — 15 de noviembre de 2026
+
+- Baseline local y remoto comprobados: `Crudo27/portfolio`, `main`, efde045. Sin cambios previos ajenos ni archivos ignorados rastreados.
+- 12 archivos obsoletos retirados (551.119 bytes): inventario CSV, resultados JSON, dos informes duplicados, cinco documentos de kits antiguos, dos instrucciones ya sustituidas y un lock de skills sin consumidores en el proyecto. El contenido útil se consolidó aquí y en DESIGN.md.
+- Se conservan las pruebas,34 snapshots,165 recursos de integridad (160 frames, manifiesto y SVG) y los tres maestros artísticos únicos. No se modifica ningún archivo de `src/`, `public/`, `tests/` ni dependencias.
+- Build/prerender y42 pruebas aprobados. No hay linter configurado. La inspección visual y Playwright completo siguen pendientes; no se atribuyen nuevas pruebas de navegador a esta limpieza documental.
+- SSH no resuelve github.com y `.git` es de sólo lectura en el sandbox: publicación mediante el conector GitHub autenticado; índice y referencias locales pendientes de sincronizar en una terminal normal.
+- Eliminaciones publicadas por petición explícita del titular, mediante commit ordinario en main; no se purga ni reescribe el historial. `.gitignore` impide reintroducir los informes generados retirados. Los comandos habituales de instalación/build/tests permanecen iguales.
+
+
 ## Contenido confirmado — 15 de noviembre de 2026
 
 Las tres fichas de proyectos y las ocho de tecnologías están completas con los textos proporcionados por el titular, recogidos en `PORTFOLIO_CONTENT.md` porque el archivo no estaba en el workspace. Se mantienen los títulos y el diálogo nativo; se añaden párrafos separados, etiquetas de tecnologías y avisos de alcance antes de las funciones de Vende360 e Idemne. No hay enlaces inventados ni información empresarial privada.
@@ -9,11 +19,11 @@ Las tres fichas de proyectos y las ocho de tecnologías están completas con los
 - Sintaxis de cinco archivos JS/MJS modificados aprobada. Sin linter configurado.216 casos E2E enumerados con `--reporter=list`; no ejecutados.
 - Responsive revisado en reglas CSS y casos preparados. **Sin inspección visual nueva:** Chrome DevTools MCP no pudo conectar (`ECONNREFUSED 127.0.0.1:9222`). No se lanzó Chromium desde el sandbox ni se actualizaron snapshots automáticamente.
 
-Fuente, alcance, cambios, verificaciones y pendientes en [content-validation.md](content-validation.md). Las secciones siguientes conservan el historial de tareas previas.
+La fuente editorial se conserva en `PORTFOLIO_CONTENT.md`. Second Brain mantiene su carácter privado y de prototipo en evolución; Vende360 refleja participación en prácticas e integración parcial; Idemne continúa en diseño/preproducción. Los avisos de alcance aparecen antes de las funciones y no se inventan enlaces públicos. Las secciones siguientes conservan el historial de tareas previas.
 
 ## Limpieza segura — 15 de noviembre de2026
 
-- Inventario previo de1832 entradas en [cleanup-inventory.csv](cleanup-inventory.csv). Se retiraron1320 archivos obsoletos; cuatro documentos originales se archivaron conservando sus bytes. Los maestros únicos se dejaron para revisión manual.
+- Inventario previo de1832 entradas, retirado tras consolidar este registro. Se retiraron1320 archivos obsoletos; cuatro documentos originales se archivaron conservando sus bytes. Los maestros únicos se dejaron para revisión manual.
 - `npm test`:8 archivos aprobados. Ejecución detallada sin aislamiento:40 pruebas,0 fallos. Se conservaron todos los archivos de pruebas, las referencias visuales y la cobertura del controlador actual; se migraron las comprobaciones del crossfade retirado.
 - `npm run build`: aprobado con prerender. `dist/` pasó de13.616.124 a6.801.090 bytes. HTML, JS y CSS compilados idénticos al build previo; recursos estáticos retenidos copiados sin cambios.
 - Integridad:80/80 WebP escritorio1536×864 y80/80 móviles720×1280, índices000–079 completos;165 huellas SHA-256 verificadas, incluyendo manifiesto, estrella y proporción áurea. ImageMagick confirmó dimensiones y formato de los160 frames. Fallback y movimiento reducido siguen usando los mismos índices, sin depender de pósteres.
@@ -21,7 +31,7 @@ Fuente, alcance, cambios, verificaciones y pendientes en [content-validation.md]
 - `npm run test:e2e -- --list`:216 casos enumerados, sin lanzar Chromium. **No se ejecutó Playwright completo ni se realizó comprobación visual durante esta limpieza.** Chrome DevTools MCP devolvió `ECONNREFUSED 127.0.0.1:9222`; no se eludió la prohibición de lanzar Chromium dentro del sandbox.
 - No fue posible inspeccionar el índice Git: `git status --short --ignored` devuelve `not a git repository`. No se inicializó Git, no se crearon commits ni se hizo push. El inventario conserva origen, clasificación y hashes de las eliminaciones verificadas.
 
-Informe y límites en [cleanup.md](cleanup.md); datos cuantitativos en [cleanup-results.json](cleanup-results.json). Lo que sigue es historial de etapas anteriores, con sus rutas originales.
+Ahorro neto de aquella limpieza:335,64 MiB. Los informes temporales se retiraron de la rama actual al conectar GitHub; permanecen en el historial Git si se necesita consultar aquella ejecución. Lo que sigue es historial de etapas anteriores, con sus rutas originales.
 
 
 ## Segunda fase cinematográfica — 13 de noviembre de 2026

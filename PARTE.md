@@ -8,21 +8,21 @@
 - Actualización autorizada: las once fichas están confirmadas en `PORTFOLIO_CONTENT.md`; la mención anterior a fichas pendientes es histórica. Mantener la confidencialidad empresarial y no inventar enlaces públicos.
 
 ## Avances completados
-- Completadas las tres fichas de proyectos y las ocho de tecnologías con los textos reales proporcionados. `PORTFOLIO_CONTENT.md` no estaba en el workspace: se creó con los mensajes del titular, sin inventar contenido.
-- Second Brain conserva su estado de prototipo profesional en evolución; Vende360 indica participación en prácticas e integración parcial; Idemne queda en diseño/preproducción con aviso de mecánicas planificadas. Repositorios/demos tienen su disponibilidad real y LinkedIn permanece pendiente.
-- Tarjetas con frase y estado; modales con párrafos breves, listas y etiquetas de tecnologías. Se mantienen Dark Premium, títulos, scroll interno, Escape, foco y animaciones. Ajustada la frase de Trayectoria que daba por desarrollados los tres proyectos.
-- Build/prerender aprobado; npm test8 archivos y ejecución detallada42 pruebas. Se verificó render completo de las once fichas, retorno de foco en host Vue, Escape, enlaces y recursos. Suite de216 casos E2E enumerada, sin ejecutarla. Sin commits ni push.
+- Repositorio GitHub conectado: `Crudo27/portfolio`, rama `main`; baseline local/remoto efde045. El titular autorizó eliminar también en GitHub los materiales generados innecesarios.
+- Retirados12 archivos (551.119 bytes): inventario e informes duplicados de limpieza/contenido, cinco documentos del primer kit, dos instrucciones de instalación sustituidas y `skills-lock.json`.
+- Registro útil consolidado en `docs/validation.md`; README y DESIGN apuntan a documentación existente. Nuevas exclusiones en `.gitignore` evitan volver a publicar esos reportes generados.
+- Se conservan las once fichas, los160 fotogramas, SVG, manifiesto, maestros únicos, licencias, componentes, pruebas y34 referencias visuales. Sin cambios en aplicación ni recursos. Build y42 pruebas aprobados.
+- Publicación autorizada mediante un único commit de limpieza en main, sin reescribir el historial. La actualización remota se realiza con control de la revisión esperada.
 
 ## Archivos tocados
-- `PORTFOLIO_CONTENT.md` (nuevo), `src/data/portfolio.js`, `src/components/ProjectCard.vue`, `src/components/DetailDialog.vue`, `src/style.css`, `src/App.vue` (un párrafo de Trayectoria).
-- `tests/content.test.mjs`, `tests/dialog.test.mjs`, `tests/portfolio.test.mjs`, `tests/e2e/portfolio.spec.mjs`.
-- `README.md`, `DESIGN.md`, `PARTE.md`, `docs/validation.md`, `docs/content-validation.md` (nuevo). `dist/` regenerado y excluido de Git.
+- Eliminados: `docs/cleanup-inventory.csv`, `docs/cleanup-results.json`, `docs/cleanup.md`, `docs/content-validation.md`, `docs/archive/joestar-v1/` (cinco archivos), dos instrucciones obsoletas de `portfolio_joestar_amanecer_80f/` y `skills-lock.json`.
+- Actualizados: `.gitignore`, `README.md`, `DESIGN.md`, `PARTE.md`, `docs/validation.md`, `portfolio_joestar_amanecer_80f/README_EMPIEZA_AQUI.md`. Ninguna dependencia nueva ni cambios de código.
 
 ## Bloqueos / Deuda técnica
-- Chrome DevTools MCP no conecta: ECONNREFUSED127.0.0.1:9222. Responsive revisado en código; pendientes render real a todos los anchos, zoom, foco/modalidad nativos, hardware móvil y Playwright completo. No se lanzó Chromium en el sandbox ni se sobrescribieron snapshots.
-- Git no expone un repositorio válido; revisión realizada mediante hashes del estado anterior. Recursos públicos y controladores de animación conservados sin cambios.
-- Pendientes legítimos: LinkedIn, enlace público de Vende360, institución/fechas y dominio canónico. No publicar código ni datos privados de Second Brain. Idemne aún no tiene demo jugable.
-- Los maestros únicos del kit siguen conservados. Los frames061/062 se repiten y070 escritorio contiene doble contorno dentro de la disolvencia original; no se modificó ningún fotograma.
+- SSH desde el sandbox no resuelve github.com y `.git` es de sólo lectura. Se publica por el conector GitHub autenticado; los archivos locales coinciden con la limpieza, pero el índice/referencias locales deben sincronizarse desde una terminal normal.
+- No se lanzó Chromium en el sandbox. Continúan pendientes revisión visual responsive, foco nativo y Playwright completo fuera del sandbox.
+- LinkedIn, enlace público de Vende360, institución/fechas y dominio canónico siguen pendientes. Second Brain mantiene su privacidad e Idemne no tiene demo jugable.
+- Conservados los maestros únicos y los límites originales de la secuencia:061/062 idénticos y doble contorno en070 escritorio.
 
 ## Siguiente paso
-- Abrir las once fichas desde una terminal externa, ejecutar `npm run test:e2e`, revisar responsive/scroll/foco y las diferencias de snapshots esperadas por el nuevo contenido. Completar sólo los enlaces/datos restantes cuando sean confirmados y revisar Git antes de publicar.
+- Desde una terminal con permisos, sincronizar los metadatos Git con main remoto sin descartar archivos de trabajo; después revisar las once fichas en navegador y ejecutar `npm run test:e2e` desde una terminal externa; revisar diferencias visuales sin aprobarlas automáticamente. Completar únicamente datos y enlaces confirmados.
